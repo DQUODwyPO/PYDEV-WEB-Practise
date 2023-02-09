@@ -19,11 +19,12 @@ from django.contrib import admin
 
 urlpatterns = [
    path('admin/', admin.site.urls),
-   path('other/', include('Apps.login.urls')),
+   #path('other/', include('Apps.login.urls')),
+   path('', include('Apps.auth_shop.urls')),
    path('other/', include('Apps.test_app.urls')),
    path('other/', include('Apps.common.urls')),
    #path('other/cart/', include('Apps.cart.urls')),
-   path('', include('Apps.home.urls')),
+   path('general/', include('Apps.home.urls')),
    #path('', include('Apps.shop.urls')),
    #path('', include('Apps.blog.urls')),
    #path('', include('Apps.cart_shop.urls')),
