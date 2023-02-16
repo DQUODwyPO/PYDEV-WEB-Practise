@@ -40,7 +40,7 @@ INSTALLED_APPS = [
 
     'Apps.common',
     #'Apps.cart',
-    #'Apps.login',
+    #####'Apps.login',
     'Apps.auth_shop',
 
     'Apps.blog',

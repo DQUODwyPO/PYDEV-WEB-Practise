@@ -1,9 +1,9 @@
 from django.urls import path
 
-from .views import IndexShopView
+from .views import checkoutShopView
 
 app_name = 'checkout'
 
 urlpatterns = [
-   path('checkout', IndexShopView.as_view(), name='checkout'),
+   path('checkout', checkoutShopView.as_view(), name='checkout'),
 ]
