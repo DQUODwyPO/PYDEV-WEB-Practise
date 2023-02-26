@@ -1,3 +1,4 @@
+import django.contrib.auth.models
 from django.shortcuts import render, redirect
 from django.views import View
 from ..cart_shop.models import Product, WishItem, WishList
@@ -53,6 +54,9 @@ class IndexShopView(View):
 
 
 def add_wishitem(request, id):
+    print(request.user)
+    if str(request.user) is 'AnonymousUser':
+        return redirect('auth_shop:login')
     prod = Product.objects.get(id=id)
     item = WishItem()
     item.product = prod

@@ -5,6 +5,8 @@ from django.shortcuts import render, redirect
 from .forms import CustomUserCreationForm
 from django.contrib.auth.models import User
 
+from ..cart_shop.models import WishList
+
 
 
 class Login(View):
@@ -37,6 +39,9 @@ class new_user(View):
            password = form.cleaned_data.get('password1')
            print("OK2")
            user = User.objects.create_user(username=username, email=email, password=password)
+           wish = WishList()
+           wish.user = user
+           wish.save()
            user.save()
            return redirect('home:index')
        print(form.errors)

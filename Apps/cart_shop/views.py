@@ -5,6 +5,8 @@ from ..cart_shop.models import WishItem
 class wishlistShopView(View):
 
     def get(self, request):
+        if str(request.user) is 'AnonymousUser':
+            return redirect('auth_shop:login')
         wishlish = WishItem.objects.filter(WishList__user=request.user)
         context = dict()
         mas = []
