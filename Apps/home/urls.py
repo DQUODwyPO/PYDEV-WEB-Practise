@@ -14,4 +14,5 @@ urlpatterns = [
    path('about/', aboutShopView.as_view(), name='about'),
    ###path('blog/', blogShopView.as_view(), name='blog'),
    path('contact/', contactShopView.as_view(), name='contact'),
+   path('add_item/<int:id>/', add_wishitem, name='add_item'),
 ]

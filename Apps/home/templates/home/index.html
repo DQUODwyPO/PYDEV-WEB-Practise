@@ -10,14 +10,14 @@
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="{% static 'shop/css/open-iconic-bootstrap.min.css'%}">
-    <link rel="stylesheet" href="{% static 'shop/css/animate.css'%}">
+    <link rel="stylesheet" href="{% static 'shop/css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'shop/css/animate.css'  %}">
     
-    <link rel="stylesheet" href="{% static 'shop/css/owl.carousel.min.css'%}">
-    <link rel="stylesheet" href="{% static 'shop/css/owl.theme.default.min.css'%}">
-    <link rel="stylesheet" href="{% static 'shop/css/magnific-popup.css'%}">
+    <link rel="stylesheet" href="{% static 'shop/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'shop/css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'shop/css/magnific-popup.css' %}">
 
-    <link rel="stylesheet" href="{% static 'shop/css/aos.css'%}">
+    <link rel="stylesheet" href="{% static 'shop/css/aos.css' %}">
 
     <link rel="stylesheet" href="{% static 'shop/css/ionicons.min.css'%}">
 
@@ -84,7 +84,7 @@
 
     <section id="home-section" class="hero">
 		  <div class="home-slider owl-carousel">
-	      <div class="slider-item" style="background-image: url({% static 'shop/images/bg_1.jpg'%});">
+	      <div class="slider-item" style="background-image: url({% static 'shop/images/bg_1.jpg' %});">
 	      	<div class="overlay"></div>
 	        <div class="container">
 	          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
@@ -229,7 +229,7 @@
 
     			<div class="col-md-6 col-lg-3 ftco-animate">
     				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="{% static product.url%}" alt="Colorlib Template">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="{% static product.url %}" alt="Colorlib Template">
     						{% if product.discount %}
                             <span class="status">{{ product.discount }}%</span>
     						{% endif %}
@@ -255,7 +255,7 @@
 	    							<a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
 	    								<span><i class="ion-ios-cart"></i></span>
 	    							</a>
-	    							<a href="#" class="heart d-flex justify-content-center align-items-center ">
+	    							<a href="{% url 'home:add_item' product.id %}" class="heart d-flex justify-content-center align-items-center ">
 	    								<span><i class="ion-ios-heart"></i></span>
 	    							</a>
     							</div>
@@ -268,7 +268,7 @@
     	</div>
     </section>
 		
-		<section class="ftco-section img" style="background-image: url({% static 'shop/images/bg_3.jpg'%});">
+		<section class="ftco-section img" style="background-image: url({% static 'shop/images/bg_3.jpg' %});">
     	<div class="container">
 				<div class="row justify-content-end">
           <div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate">
